@@ -1,0 +1,150 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  /*  */
+  height: 100vh;
+  max-width: 1440px;
+  background-color: hsl(233, 47%, 7%);
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  max-width: 1000px;
+  background: hsl(244, 38%, 16%);
+  border-radius: 0.8em 0.8em 0.8em 0.8em;
+}
+
+.image-container {
+  background-color: hsl(277, 64%, 61%);
+  border-radius: 0 0.8em 0.8em 0;
+}
+
+#image-header-desktop {
+  border-radius: 0 0.8em 0.8em 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+h1 {
+  width: 80%;
+  margin-left: 1.5rem;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  color: white;
+  font-weight: 700;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-top: 0.5rem;
+}
+
+.description {
+  margin-left: 1.5rem;
+  width: 85%;
+}
+
+.stats-container {
+  margin-left: 1.5rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.stats-container h3 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+.stats-container p {
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media screen and (max-width: 750px) {
+  .card {
+    grid-template-columns: 100%;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 10em;
+  }
+  .image-container {
+    order: 1;
+    width: 100%;
+    border-radius: 0.8rem 0.8rem 0em 0em;
+  }
+  img {
+    content: url(./images/image-header-mobile.jpg);
+    border-radius: 0.8rem 0.8rem 0em 0em;
+  }
+  .text-container {
+    order: 2;
+    text-align: center;
+    /* background-color: blueviolet; */
+  }
+  h1 {
+    margin: 0;
+    width: 100%;
+  }
+  .description {
+    margin: 0;
+    width: 100%;
+  }
+  .stats-container {
+    /* background-color: brown; */
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+  .stats-container h3 {
+    font-size: 1.5rem;
+    margin: 0 0 0.2rem;
+  }
+  .stats-container p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .stats-container :last-child p {
+    margin-bottom: 0rem;
+  }
+}
+
+@media (max-width:500px) {
+  .card {
+    width: 100%;
+    margin: 5em 0 0;
+  }
+}
