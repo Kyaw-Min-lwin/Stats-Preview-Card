@@ -1,0 +1,129 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(./images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* change the background */
+
+@media (min-width:750px) {
+    body {
+        background: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-color: hsl(225, 100%, 94%);
+        background-size: initial;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.card {
+    max-width: 450px;
+    width: 80%;
+    border-radius: 16px;
+    background-color: #fff;
+}
+
+@media (max-width:750px) {
+    .card {
+        max-width: 400px;
+    }
+}
+
+.illustration {
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+}
+
+.text-container {
+    text-align: center;
+}
+
+h1 {
+    color: hsl(223, 47%, 23%);
+    font-size: 1.7rem;
+    margin: 1em;
+    font-weight: 900;
+}
+
+.desc {
+    width: 80%;
+    margin: 1em auto;
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+}
+
+.plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+}
+
+a {
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: hsl(245, 75%, 66%);
+}
+
+#music {
+    padding: 3px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#pay {
+    font-weight: 700;
+    font-size: 1rem;
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    box-shadow: 0px 10px 5px 8px hsl(225, 100%, 94%);
+    cursor: pointer;
+}
+
+#pay:hover {
+    background-color: hsl(245, 75%, 66%);
+}
+
+#cancel {
+    color: hsl(224, 23%, 55%);
+    outline: none;
+    background-color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    margin: 1em 0 2em;
+    cursor: pointer;
+}
+
+#cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
